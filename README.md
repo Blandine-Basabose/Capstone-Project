@@ -1,4 +1,4 @@
-# Capstone-Projecct
+# Capstone-Project
 
 ATLP CAPSTONE PROJECT
 MY BRAND(Personal Website + Blog)
