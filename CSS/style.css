@@ -59,7 +59,8 @@ nav ul li a:hover {
   display: none;
 }
 
-.content {
+.content,
+.main-about {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -120,11 +121,13 @@ nav ul li a:hover {
   color: #1f2235;
   border: none;
 }
-.content-left {
+.content-left,
+.about-left {
   height: 100vh;
   width: 300px;
 }
-.content-left > img {
+.content-left > img,
+.about-left > img {
   width: 100%;
 }
 .service-content {
@@ -135,15 +138,17 @@ nav ul li a:hover {
   height: 100vh;
   width: 100%;
 }
-.txt, .about-txt {
+.txt,
+.about-txt {
   text-align: center;
- 
 }
-.txt h3, .about-txt h3 {
+.txt h3,
+.about-txt h3 {
   color: #1f2235;
   padding-bottom: 20px;
 }
-.txt p, .about-txt p{
+.txt p,
+.about-txt p {
   padding-bottom: 30px;
   width: 50%;
   margin: auto;
@@ -154,7 +159,6 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   margin: 30px 30px 0 0;
-  
 }
 
 .card1,
@@ -183,6 +187,32 @@ nav ul li a:hover {
 
 h5 {
   padding: 10px 0;
+}
+#about {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex: 1;
+}
+.about-right {
+  width: 50%;
+}
+.about-bottom {
+  display: flex;
+  justify-content: space-between;
+padding: 50px 0;
+
+}
+.about-bottom-right h4,.about-bottom-left h4 {
+  padding-top: 20px;
+  color: #560404;
 }
 @media (max-width: 768px) {
   label.logo {
