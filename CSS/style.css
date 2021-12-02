@@ -138,17 +138,14 @@ nav ul li a:hover {
   height: 100vh;
   width: 100%;
 }
-.txt,
-.about-txt {
+.txt {
   text-align: center;
 }
-.txt h3,
-.about-txt h3 {
+.txt h3 {
   color: #1f2235;
   padding-bottom: 20px;
 }
-.txt p,
-.about-txt p {
+.txt p {
   padding-bottom: 30px;
   width: 50%;
   margin: auto;
@@ -156,18 +153,19 @@ nav ul li a:hover {
 .cards {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
-  margin: 30px 30px 0 0;
+  margin-top: 30px;
+  
 }
 
 .card1,
 .card2,
 .card3 {
-  margin: 30px;
   padding: 10px 10px;
-  width: 200px;
+  width: 20%;
   height: 200px;
+  margin: auto;
   background: #fbfbfb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -188,16 +186,22 @@ nav ul li a:hover {
 h5 {
   padding: 10px 0;
 }
-#about {
-  display: flex;
-  flex-direction: column;
+.about-txt {
+  text-align: center;
 }
+.about-txt h3 {
 
+  padding-bottom: 20px;
+}
+.about-txt p {
+  width: 50%;
+  margin: auto;
+}
 .main-about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+
   width: 100%;
   flex: 1;
 }
@@ -247,18 +251,19 @@ padding: 50px 0;
   #check:checked ~ ul {
     left: 0;
   }
-  .content {
+  .content,#about{
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    height: 50%;
   }
-  .content-left {
+  .content-left, .about-left {
     height: 300px;
     width: 300px;
     padding-right: 50px;
   }
-  .content-right {
-    margin-top: 80px;
+  .content-right,.about-right {
+    margin: 50px 0;
     text-align: center;
     padding: 0px;
   }
@@ -277,5 +282,28 @@ padding: 50px 0;
     height: 190px;
     background: #fbfbfb;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+  #about{
+    display: flex;
+    flex-direction: column;
+    justify-content:column-reverse;
+  }
+  .about-txt{
+    margin-top: 100%;
+  }
+  .main-about{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-bottom {
+    display: flex;
+    flex-direction: column;
+
+  
+  }
+  .about-top{
+  padding-top: 20px;
   }
 }
