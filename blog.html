@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://fonts.googleapis.com/css?family=Andika"
-      rel="stylesheet"
-    />
-    
-    <link rel="stylesheet" href="/CSS/style.css">
-    <title>Blog</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Andika" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/CSS/style.css">
+  <title>Blog</title>
 </head>
+
 <body>
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><a href="index.html">BlondiE</label></a>
-        <button><a href="login.html">LOGIN</button></a>
-    </nav>
-    <div class="blogs">
-      <div class="previousround">
-        <a href="#" >&#8249;</a>
-      </div>
-      <div class="blog4">
-      <h2>Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum repellendus ad maxime sit dolore voluptatum?</p>
-      </div>
-      <div class="blog1">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum repellendus ad maxime sit dolore voluptatum?</p>
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><a href="index.html">BlondiE</label></a>
+    <button><a href="login.html">LOGIN</button></a>
+  </nav>
+  <div class="blogs">
+    <div class="previousround">
+      <a href="#">&#8249;</a>
     </div>
-        <div class="blog2">
-          <h2>Title</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum repellendus ad maxime sit dolore voluptatum?</p>
-          </div>
-          <div class="blog3">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum repellendus ad maxime sit dolore voluptatum?</p>
-           
-           
-    
+    <div class="blog4">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum
+        repellendus ad maxime sit dolore voluptatum?</p>
+    </div>
+    <div class="blog1">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum
+        repellendus ad maxime sit dolore voluptatum?</p>
+    </div>
+    <div class="blog2">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum
+        repellendus ad maxime sit dolore voluptatum?</p>
+    </div>
+    <div class="blog3">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus nisi cupiditate cum
+        repellendus ad maxime sit dolore voluptatum?</p>
+
+
+
     </div>
     <div class="nextround">
-              
-      <a href="#">&#8250;</a>
-     
 
-                  </div>
+      <a href="#">&#8250;</a>
+
+
+    </div>
+    <script>
+      const firebaseConfig = {
+  apiKey: "AIzaSyAmjSaPEpa8QqgNAtvam3mH56k8l9Loe6M",
+  authDomain: "my-brand-832ab.firebaseapp.com",
+  projectId: "my-brand-832ab",
+  storageBucket: "my-brand-832ab.appspot.com",
+  messagingSenderId: "779202197671",
+  appId: "1:779202197671:web:0e6c4d03a059fcc2c18382",
+  measurementId: "G-3SMX0EBXCN"
+};
+var blogs = document.querySelector('.blogs');
+var title = document.querySelector('#article-title');
+var content = document.querySelector('#description');
+var blogForm = document.querySelector('#add-form');
+blogForm.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  db.collection('Blogs').add({
+
+title : blogForm['article-title'].value,
+content : blogForm['description'].value
+
+  }).then(result => console.log('success')).catch(err => {console.log(err)})
+  blogForm['article-title'].value = ' ';
+blogForm['description'].value = '';
+blogForm.parentElement.parentElement.remove('active');
+})
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore()
+const auth= firebase.auth()
+      db.collection('Blogs').get().then(snapshot =>  
+{
+  const data = snapshot.docs;
+  data.forEach((d) =>{
+    console.log(d.data().title);
+  });
+  data.forEach((d) =>{
+    const card = `
+    <div class="blog">
+            
+            <h5>${d.data().title}</h5>
+            <p>
+             ${d.data().content}
+            </p>
+          </div>
+    `;
+    blogs.innerHTML +=card;
+  });
+}).catch((error)=>{
+  console.log(error);
+  console.log('error');
+
+});
+    </script>
 </body>
+
 </html>

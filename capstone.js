@@ -1,13 +1,12 @@
 
 //ADD ARTICLE
-const form = document.querySelector('.form');
+const addArticle= document.querySelector('.form');
 
 const addBtn = document.querySelector('#add-btn');
 
 addBtn.addEventListener('click', ()=>{
-  form.classList.add('active');
-  // form.style.display = 'block';
-  console.log(form);
+  addArticle.classList.toggle('form-display');
+  console.log(addArticle);
 });
 //DELETE ARTICLE
 var btns = document.querySelectorAll(".delete");

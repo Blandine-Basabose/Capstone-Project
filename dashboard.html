@@ -22,20 +22,17 @@
       <div class="left">
         <img src="/Images/Blandine Basabose Usanase_Photo.JPG" alt="my profile" />
         <h3>Welcome Blandine</h3>
-        <!-- <p class="blogs">Blog list</p> -->
+        
         <button id="logout">Logout</button>
       </div>
       <div class="right">
-        <!-- <form class="add-blog" autocomplete="off">
-            <input type="text" name="add" placeholder="Add blog"/>
-            <button>Add</button>
-          </form> -->
+      
         <div class="add-blog">
           <button class="btn" id="add-btn">Add Article</button>
         </div>
         <div class="blog-lists">
           <!-- <div class="blog">
-            <img class="blogimage" src="/Images/Rectangle 19.png" alt="Blog-picture" />
+            
             <h5>Blog 1</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,7 +42,7 @@
             <button class="delete">Delete</button>
           </div>
           <div class="blog">
-            <img class="blogimage" src="/Images/Rectangle 21.png" alt="Blog-picture" />
+           
             <h5>Blog 1</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -55,7 +52,7 @@
             <button class="delete">Delete</button>
           </div>
           <div class="blog">
-            <img class="blogimage" src="/Images/Rectangle 20.png" alt="Blog-picture" />
+           
             <h5>Blog 1</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,8 +65,8 @@
         <div class="form">
 
         <form  id="add-form">
-          <input type="text" name ="title" placeholder="Title" width="5px" , height="5px">
-        <textarea name="content" id="content" placeholder="Content" cols="30" rows="10"></textarea>
+          <input type="text" name ="title" id="article-title" placeholder="Title" width="5px" , height="5px">
+        <textarea name="content" id="description" placeholder="Content" cols="30" rows="10"></textarea>
           <button>Submit</button>
         </form>
         </div>
@@ -77,18 +74,9 @@
     </div>
   </div>
 
-  <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script> -->
-  <script>
-    // Import the functions you need from the SDKs you need
-   
-  // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  <script>
+  
 const firebaseConfig = {
   apiKey: "AIzaSyAmjSaPEpa8QqgNAtvam3mH56k8l9Loe6M",
   authDomain: "my-brand-832ab.firebaseapp.com",
@@ -123,48 +111,41 @@ var blogForm = document.querySelector('#add-form');
 blogForm.addEventListener('submit', (e) =>{
   e.preventDefault();
   db.collection('Blogs').add({
-// image: document.querySelector('#article-image').value,
+
 title : blogForm['article-title'].value,
 content : blogForm['description'].value
 
   }).then(result => console.log('success')).catch(err => {console.log(err)})
   blogForm['article-title'].value = ' ';
 blogForm['description'].value = '';
-blogForm.parentElement.parentElement.classList.remove('active');
+blogForm.parentElement.parentElement.remove('active');
 })
-
-
-db.collection('Blogs').get().then(snapshot => {
+db.collection('Blogs').get().then(snapshot =>  
+{
   const data = snapshot.docs;
-// console.log(data)
-data.forEach(d => { console.log(d.data().title);
-});
-
-data.forEach((d) =>{
-const card =
-`<div class="blog">
+  data.forEach((d) =>{
+    console.log(d.data().title);
+  });
+  data.forEach((d) =>{
+    const card = `
+    <div class="blog">
             
-            <h5> ${d.data().title}</h5>
+            <h5>${d.data().title}</h5>
             <p>
              ${d.data().content}
             </p>
             <button class="update">Update</button>
             <button class="delete">Delete</button>
-          </div>`;
-          blogList.innerHTML += card;
+          </div>
+    `;
+    blogList.innerHTML +=card;
+  });
+}).catch((error)=>{
+  console.log(error);
+  console.log('error');
 
 });
 
-})
-.catch(err => {console.log(error);
-});
-// db.collection('Blogs').add({
-//   title: blogForm.title.value,
-//   content:blogForm.description.value
-
-// })
-
-// console.log(title, content);
   </script>
   <script src="capstone.js"></script>
   <script src="brand.js"></script>
