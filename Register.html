@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Andika" rel="stylesheet" />
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <title>SignUp</title>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><a href="index.html">BlondiE</label></a>
+
+        </nav>
+
+
+
+        <form id="signup-form">
+            <h1>Register</h1>
+            <input type="email" name="email" class="signup-email" placeholder="Enter your valid email">
+            <input type="password" class="signup-password" placeholder="Enter your password">
+            <button type="submit">Register</button>
+
+        </form>
+
+    </section>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAmjSaPEpa8QqgNAtvam3mH56k8l9Loe6M",
+            authDomain: "my-brand-832ab.firebaseapp.com",
+            projectId: "my-brand-832ab",
+            storageBucket: "my-brand-832ab.appspot.com",
+            messagingSenderId: "779202197671",
+            appId: "1:779202197671:web:0e6c4d03a059fcc2c18382",
+            measurementId: "G-3SMX0EBXCN"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+        const auth = firebase.auth()
+
+        // get user info
+        const email = document.querySelector('.signup-email');
+        const password = document.querySelector('.signup-password');
+        const signupForm = document.querySelector('#signup-form');
+        signupForm.addEventListener('submit', logSubmit);
+
+        function logSubmit(e) {
+            e.preventDefault();
+            console.log(email.value, password.value);
+            auth.createUserWithEmailAndPassword(email.value, password.value).then(cred => {
+                // close the signup modal & reset form
+
+                signupForm.reset();
+                console.log(cred);
+            });
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
