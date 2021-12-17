@@ -2,19 +2,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-body {
-  background-color: white;
-  color: #1f2235;
   font-family: "andika";
 }
 
-nav {
-  background: #eeeeee;
+body {
+  background-color: white;
+  color: #1f2235;
+}
 
+nav {
+  position: fixed;
+  background: #eeeeee;
   height: 60px;
   width: 100%;
 }
+
 label.logo {
   color: #1f2235;
   font-size: 25px;
@@ -22,15 +24,23 @@ label.logo {
   padding: 0 100px;
   font-weight: bold;
 }
+
+label.logo a {
+  text-decoration: none;
+  color: #1f2235;
+}
+
 nav ul {
   float: right;
   margin-right: 20px;
 }
+
 nav ul li {
   display: inline-block;
   line-height: 55px;
   margin: 0 5px;
 }
+
 nav ul li a {
   color: #1f2235;
   font-size: 12px;
@@ -46,6 +56,7 @@ nav ul li a:hover {
   color: #eeeeee;
   transition: 0.5s;
 }
+
 .checkbtn {
   font-size: 30px;
   color: #1f2235;
@@ -55,6 +66,7 @@ nav ul li a:hover {
   cursor: pointer;
   display: none;
 }
+
 #check {
   display: none;
 }
@@ -64,19 +76,20 @@ nav ul li a:hover {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  
 }
+
 .content-right {
-  
   font-size: 20px;
   padding: 0 100px;
 }
+
 .icons {
   display: flex;
   font-size: 10px;
   padding-bottom: 30px;
 }
-.icons > div {
+
+.icons>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,13 +99,15 @@ nav ul li a:hover {
   border: 1px solid #1f2235;
   margin-right: 20px;
 }
-.icons > div:hover {
+
+.icons>div:hover {
   background-color: #1f2235;
 }
+
 .cta {
-  
   padding-top: 30px;
 }
+
 .cta button {
   font-size: 15px;
   width: 100px;
@@ -105,41 +120,45 @@ nav ul li a:hover {
   border: 1px solid #1f2235;
   cursor: pointer;
 }
+
 .cta button:hover {
   background-color: #1f2235;
   color: #eeeeee;
 }
+
 .cta i {
   font-size: 35px;
   margin-top: 3px;
 }
+
 .cta i:hover {
   color: #1f2235;
   border: none;
 }
-/* .content-left,
-.about-left {
-  height: 100vh;
-  width: 300px;
-} */
-.content-left > img,
-.about-left > img {
+
+.content-left>img,
+.about-left>img {
   width: 100%;
 }
 
-#services{
+#services {
   background-color: #eeeeee;
   padding: 20px;
 }
+
 .txt {
   text-align: center;
   width: 50%;
   margin: auto;
-  
 }
-.txt h2{
+
+.txt h2 {
   padding-bottom: 35px;
 }
+.contact-right input + span {
+  display:none;
+  color: red;
+}  
 .cards {
   display: flex;
   justify-content: space-around;
@@ -153,20 +172,23 @@ nav ul li a:hover {
 .card3 {
   padding: 10px 10px;
   width: 25%;
- margin: 10px;
+  margin: 10px;
   background: #fbfbfb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
-.card1 > img {
+
+.card1>img {
   width: 30px;
   height: 30px;
 }
-.card2 > img {
+
+.card2>img {
   width: 30px;
   height: 30px;
 }
-.card3 > img {
+
+.card3>img {
   width: 30px;
   height: 30px;
 }
@@ -174,21 +196,24 @@ nav ul li a:hover {
 h5 {
   padding: 10px 0;
 }
+
 #about {
   padding: 20px;
- 
 }
 
 .about-txt {
   text-align: center;
 }
+
 .about-txt h2 {
   padding: 20px 0;
 }
+
 .about-txt p {
   width: 50%;
   margin: auto;
 }
+
 .main-about {
   display: flex;
   justify-content: space-between;
@@ -198,49 +223,140 @@ h5 {
 .about-right {
   width: 50%;
 }
+
 .about-bottom {
   display: flex;
   justify-content: space-between;
   padding: 0px 0;
 }
+
 .about-bottom-right h4,
 .about-bottom-left h4 {
   padding-top: 20px;
   color: #560404;
 }
+
+nav button {
+  float: right;
+  margin: 15px 20px 0 0;
+  width: 5%;
+  height: 30px;
+  border: none;
+  background-color: #1f2235;
+  border: 1px solid #1f2235;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+nav button a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+nav button a:hover {
+  background-color: white;
+  border: 1px solid #1f2235;
+  color: #1f2235;
+  border: none;
+}
+
+#signup-form, #login-form {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-form  h1, #login-form h1{
+  margin-bottom: 10px;
+}
+#signup-form button, #login-form button{
+  width: 10%;
+  background-color: #1f2235;
+  color: white;
+margin-top: 10px;
+}
+#signup-form button:hover, #login-form button:hover{
+  color: #1f2235;
+  background-color: white;
+  border: 1px solid #1f2235;
+}
+#signup-form input, #login-form input {
+  width: 25%;
+  margin: 10px 0;
+}
+
+/* .logins {
+  padding: 100px 0;
+  width: 40%;
+  margin: auto;
+  height: 100vh;
+  text-align: center;
+  line-height: 60px;
+}
+
+.logins input {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.loginbtn {
+  width: 25%;
+  background-color: #1f2235;
+  padding: 3px;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: #eeeeee;
+}
+
+.loginbtn a {
+  text-decoration: none;
+  color: #eeeeee;
+
+}
+
+.loginbtn a:hover {
+
+  background: white;
+  color: #1f2235;
+  border: 1px solid #1f2235;
+  border: none;
+} */
+
 #contact {
-  background-color:#eeeeee;
+  background-color: #eeeeee;
   display: flex;
   justify-content: space-around;
   align-items: center;
- padding: 20px;
+  padding: 20px;
 }
 
-.contact-txt{
+.contact-txt {
   width: 50%;
   margin: auto;
   padding: 20px;
 }
-/* .contact-txt h2{
-  padding: 10px;
-} */
-.contact-left> .icons{
+
+.contact-left>.icons {
   padding-left: 28%;
 }
 
-/* .contact-txt p {
-  padding: 30px 0;
-} */
 .contact-right {
   width: 50%;
 }
+
 .contact-right h2 {
   padding-bottom: 20px;
 }
+
 input {
   width: 50%;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #1f2235;
   margin: 5px 0;
 }
@@ -251,6 +367,7 @@ textarea {
   height: 20%;
   border-radius: 5px;
 }
+
 ::placeholder {
   padding: 20px 0 0 15px;
 }
@@ -260,15 +377,249 @@ button {
   height: 35px;
   border: none;
   background-color: #1f2235;
-  border: 1px solid #1f2235;
+  /* border: 1px solid #1f2235; */
   color: #eeeeee;
   border-radius: 50px;
   margin-bottom: 30px;
 }
+
 button:hover {
   background-color: white;
   border: 1px solid #1f2235;
   color: #1f2235;
+}
+
+.blogs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 20px;
+  /* margin: 20px 0; */
+}
+
+.blog1,
+.blog2,
+.blog3,
+.blog4 {
+  margin: 30px;
+  padding: 30px;
+  width: 60%;
+  background: #fbfbfb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.previousround, .nextround {
+  background-color: #1f2235;
+
+  border-radius: 50%;
+  float: left;
+
+}
+
+.nextround a, .previousround a {
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.nextround a:hover, .previousround a:hover {
+  background-color: #ffffff;
+  color: #1f2235;
+}
+
+.admintop h2 {
+  text-align: center;
+  padding-top: 15px;
+  position: fixed;
+  background: #1f2235;
+  color: #eeeeee;
+  height: 60px;
+  width: 100%;
+
+}
+
+.adminleft {
+  padding: 100px;
+  width: 30%;
+  background: black;
+}
+
+.adminright {
+  width: 70%;
+  background-color: red;
+}
+
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  font-family: "Andika";
+}
+
+.top {
+  background-color: #1f2235;
+  color: #eeeeee;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+
+}
+
+.bottom {
+  height: 89.5vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.bottom .left {
+  background-color: #1f2235;
+  width: 25%;
+  /* margin: auto; */
+  align-items: center;
+  padding: 80px;
+  color: #eeeeee;
+}
+
+.bottom .left img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+
+}
+
+/* div>img{
+  width: 100%;
+ 
+} */
+.bottom .left h3 {
+  padding: 30px 0;
+
+}
+
+/* .bottom .blogs{
+  border-radius: none;
+  width: %;
+  height: 10px;
+  padding: 15px 0px;
+  background-color: #eeeeee;
+  color: #1f2235;
+} */
+.bottom .left button {
+
+  width: 60%;
+  color: #eeeeee;
+  background-color: rgb(75, 8, 8);
+}
+
+.bottom .left button:hover {
+  color: #1f2235;
+  background-color: #eeeeee;
+  border: 1px solid #1f2235;
+}
+
+.bottom .right {
+  background-color: #eeeeee;
+  width: 75%;
+}
+
+.add-blog {
+  height: 60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: none;
+}
+
+body {
+  position: relative;
+}
+
+.form {
+  background-color: #1f2235;
+  color: #eeeeee;
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 30%;
+  padding: 30px 0 0 100px;
+  /* align-items: center; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.add-blog #add-btn {
+  float: right;
+  margin: 10px 30px;
+  width: 10%;
+  outline: none;
+}
+
+.form.active, .update.active {
+  display: block;
+}
+
+.form-article input, .form-article textarea {
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: #eeeeee;
+  color: #1f2235;
+}
+
+.form-article button {
+  background-color: #eeeeee;
+  color: #1f2235;
+
+}
+
+
+/* .add-blog input{
+  border: none;
+  outline: none;
+  margin:10px 80px 0 30px;
+}
+.add-blog button{
+ float: right;
+ margin:10px 30px ;
+ width: 10%;
+} */
+.blog-lists {
+
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.blog-lists .blog {
+
+  width: 30%;
+  border: 1px solid #1f2235;
+  border-radius: 5px;
+  flex-wrap: nowrap;
+
+
+}
+
+.blog img {
+  width: 100%;
+}
+
+.blog p, h5 {
+  padding: 20px 30px;
+}
+
+.blog button {
+  width: 30%;
+  margin-left: 30px;
+}
+
+.blog .delete {
+  margin-left: 20px;
+  background-color: #560404;
 }
 
 @media (max-width: 768px) {
@@ -276,45 +627,55 @@ button:hover {
     font-size: 20px;
     padding-left: 50px;
   }
+
   .checkbtn {
     display: block;
   }
 
   ul {
     position: fixed;
-    width: 20%;
+    width: 100%;
     height: 50px;
     top: 60px;
     left: -100%;
+    /* gap: 0; */
     text-align: center;
     transition: all 0.5s;
   }
 
   nav ul li {
     display: block;
+    background-color: #1f2235;
   }
+
   nav ul li a {
     font-size: 10px;
+    color: #eeeeee;
   }
+
   nav ul li a:hover,
   a.active {
-    background: #1f2235;
-    color: #cfb6b6;
+    background: white;
+    color: #1f2235;
   }
-  #check:checked ~ ul {
+
+  #check:checked~ul {
     left: 0;
   }
+
   .content {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
+
   .content-left {
     height: 300px;
     width: 300px;
     padding-right: 50px;
   }
+
   .content-right {
     display: flex;
     flex-direction: column;
@@ -322,10 +683,12 @@ button:hover {
     align-items: center;
     padding: 50px 0 0;
   }
+
   .cards {
     display: flex;
     flex-direction: column;
-    margin-right: 0px;
+    /* margin-right: 0px; */
+    font-size: 20px;
   }
 
   .card1,
@@ -333,11 +696,11 @@ button:hover {
   .card3 {
     margin: 30px;
     padding: 30px;
-    width: 60%;
+    width: 75%;
     background: #fbfbfb;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
- 
+
   .about-left {
     height: 300px;
     width: 300px;
@@ -349,42 +712,137 @@ button:hover {
     text-align: center;
     padding: 0px;
   }
+
   #about {
     display: flex;
     flex-direction: column;
     justify-content: column-reverse;
+    font-size: 15px;
   }
 
   .main-about {
     display: flex;
     flex-direction: column;
   }
+
   .about-bottom {
     display: flex;
     flex-direction: column;
   }
+
   .about-top {
     padding-top: 20px;
   }
+
+  nav button {
+    margin: 15px 20px 0 0;
+    width: 15%;
+    height: 30px;
+    border: none;
+    background-color: #1f2235;
+    /* border: 1px solid #1f2235; */
+    border-radius: 50px;
+    margin-bottom: 30px;
+  }
+
+  nav button a:hover {
+    background-color: white;
+    border: 1px solid #1f2235;
+    color: #1f2235;
+  }
+
   #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  .contact-txt h2{
+
+  .contact-txt h2 {
     padding: 10px 0;
   }
+
   input {
     width: 100%;
-    height: 30px;
+    height: 40px;
+    border-radius: 10px;
   }
+
   textarea {
     width: 100%;
   }
+
   button {
     width: 35%;
     height: 35px;
     text-align: center;
+  }
+
+  .blogs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog1, .blog2, .blog3, .blog4 {
+    margin: 30px;
+    padding: 30px;
+    width: 70%;
+    background: #fbfbfb;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .nextround, .previousround {
+    display: none;
+  }
+
+  .logins {
+    width: 70%;
+  }
+
+  .loginbtn {
+    width: 35%;
+  }
+
+  p {
+    font-size: 20px;
+
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* background-color: #1f2235; */
+  }
+
+  .bottom .left, .bottom .right {
+    width: 100%;
+  }
+
+  .blog-lists {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .blog-lists .blog {
+    width: 100%;
+    margin: 20px 0 0 15px;
+  }
+
+  .add-blog #add-btn {
+    width: 30%;
+  }
+
+  .form {
+    background-color: #1f2235;
+    top: 100%;
+    left: 15%;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    height: 55%;
+    padding: 30px 10px 0 20px;
+    margin: 20px 0 0 90px;
   }
 }
