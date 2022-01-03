@@ -16,40 +16,47 @@
 
 <body>
   <section>
-    <nav>
-      <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo"><a href="index.html">BlondiE</label></a>
-
-    </nav>
+   
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="index.html">BlondiE</a>      
+      <button class="navbar-menu"><i class="fas fa-bars"></i></button>
+      </div>
+      <div class="navbar-items">
+        <a href="index.html">Home</a>
+        <a href="#services">Service</a>
+        <a href="#about">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Contact</a>
+  
+      </div>
+    </div>
 
     <form id="login-form">
       <h1>Welcome</h1>
       <input type="email" name="email" class="login-email" placeholder="Enter your valid email">
-      <input type="password" class="login-password" placeholder="Enter your password">
+      <input type="password" class="login-password" id="password" placeholder="Enter your password">
       <p>forgot password?</p>
-      <button type="submit">LOGIN</button>
+      <button  onclick=" return recordHistory()" type="submit" >LOGIN</button>
 
     </form>
 
   </section>
   <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAmjSaPEpa8QqgNAtvam3mH56k8l9Loe6M",
-      authDomain: "my-brand-832ab.firebaseapp.com",
-      projectId: "my-brand-832ab",
-      storageBucket: "my-brand-832ab.appspot.com",
-      messagingSenderId: "779202197671",
-      appId: "1:779202197671:web:0e6c4d03a059fcc2c18382",
-      measurementId: "G-3SMX0EBXCN"
-    };
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyAmjSaPEpa8QqgNAtvam3mH56k8l9Loe6M",
+    //   authDomain: "my-brand-832ab.firebaseapp.com",
+    //   projectId: "my-brand-832ab",
+    //   storageBucket: "my-brand-832ab.appspot.com",
+    //   messagingSenderId: "779202197671",
+    //   appId: "1:779202197671:web:0e6c4d03a059fcc2c18382",
+    //   measurementId: "G-3SMX0EBXCN"
+    // };
     
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore()
-    const auth = firebase.auth()
+    // firebase.initializeApp(firebaseConfig);
+    // const db = firebase.firestore()
+    // const auth = firebase.auth()
 
     const email = document.querySelector('.login-email');
     const password = document.querySelector('.login-password');
@@ -72,9 +79,29 @@
       });
     };
     
+function recordHistory(){//function to validate input text fields on client side, via record button
+  // e.preventDefault();
+// function noReload(e){
+//   e.preventDefault();
+
+  
+  // var email = document.querySelector("#email").value;
+  // var password = document.querySelector("#password").value;
+  if(email ==='' ||password===''){
+    
+  alert("Please fill all text fields...!!!!!!");
+   
+  // return false;
+  }   
+
+  }
 
  
   </script>
+  <script src="https://kit.fontawesome.com/0bc2a4a873.js" crossorigin="anonymous"></script>
+
+  <script src="../scripts/firebase.js"></script>
+  <script src="../scripts/capstone.js"></script>
 </body>
 
 </html>

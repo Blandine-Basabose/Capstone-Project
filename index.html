@@ -1,213 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Andika"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <title>My Brand project</title>
-  </head>
-  <body>
-    <section id="home">
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><a href="#">BlondiE</label></a>
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Andika" rel="stylesheet" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <title>My Brand project</title>
+</head>
 
-      <div class="content">
-        <div class="content-right">
-          <div class="icons">
-            <div>
-              <a href="https://web.facebook.com/"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://twitter.com/home"
-                ><i class="fa fa-twitter"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/"
-                ><i class="fa fa-instagram"></i
-              ></a>
-            </div>
-            <div>
-              <a
-                href="https://www.linkedin.com/in/blandine-basabose-usanase-36184816a/"
-                ><i class="fa fa-linkedin"></i
-              ></a>
-            </div>
-          </div>
-          <div>
-            <h3>I am Blandine BASABOSE</h3>
-            <p>I am a designer and a web developer</p>
-          </div>
-          <div class="cta">
-            <a href="#"><button>My Portfolio</button></a>
-          </div>
-        </div>
-        <div class="content-left">
-          <img src="./Images/profile.png" alt="My image" />
-        </div>
-      </div>
-    </section>
-    <section id="services">
-      <div class="txt">
-        <h2>My Services</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          vel augue erat. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Pellentesque vel augue erat.
-        </p>
-        <img src="./Images/Line 1.png" alt="line" />
-      </div>
+<body>
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="#">BlondiE</a>
+      <button class="navbar-menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="navbar-items">
+      <a href="#">Home</a>
+      <a href="#services">Service</a>
+      <a href="#about">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
 
-      <div class="cards">
-        <div class="card1">
-          <img src="./Images/web design.png" alt="My image" />
-          <h5>Web Design</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card2">
-          <img src="./Images/web development.png" alt="My image" />
-          <h5>Web Development</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card3">
-          <img src="./Images/photography.png" alt="My image" />
-          <h5>Photography</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card1">
-          <img src="./Images/web design.png" alt="My image" />
-          <h5>Web Design</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card2">
-          <img src="./Images/web development.png" alt="My image" />
-          <h5>Web Development</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card3">
-          <img src="./Images/photography.png" alt="My image" />
-          <h5>Photography</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="about-txt">
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          vel augue erat. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Pellentesque vel augue erat.
-        </p>
-        <img src="./Images/Line 1.png" alt="line" />
-      </div>
-      <div class="main-about">
-        <div class="about-left">
-          <img src="./Images/profile.png" alt="my image" />
-        </div>
-        <div class="about-right">
-          <div class="about-top">
-            <h4>Hi There.</h4>
-            <p>
-              Facilisi. Nunc leo tellus, pellentesque id elit nec, cursus rutrum
-              ex. Nullam ac orci at quam pharetra consequat vitae id tortor.
-              Etiam dapibus libero ut luctus commodo. Cras malesuada quis odio
-              et suscipit. Donec ligula sem, congue id ullamcorper a, auctor et
-              erat.
-            </p>
-          </div>
-          <div class="about-bottom">
-            <div class="about-bottom-left">
-              <h4>Name:</h4>
-              <p>Blandine BASABOSE</p>
-              <h4>Email:</h4>
-              <p>example@gmai.com</p>
-            </div>
-            <div class="about-bottom-right">
-              <h4>Phone:</h4>
-              <p>+250788000000</p>
-              <h4>LinkedIn:</h4>
-              <p>Blandine Basabose Usanase</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="contact-left">
-        <div class="contact-txt">
-          <h2>Contact Me</h2>
+    </div>
+  </div>
+  <section id="home">
 
+
+    <div class="content">
+      <div class="content-right">
+        <div class="icons">
+
+          <a href="https://web.facebook.com/">
+            <div><img src="Images/facebook-new.png"></img>
+            </div>
+          </a>
+
+
+          <a href="https://twitter.com/home">
+            <div><img src="Images/twitter.png"></img>
+            </div>
+          </a>
+
+
+          <a href="https://www.instagram.com/">
+            <div><img src="Images/instagram-new.png"></img>
+            </div>
+          </a>
+
+
+          <a href="https://www.linkedin.com/in/blandine-basabose-usanase-36184816a/">
+            <div><img src="Images/linkedin.png"></img>
+            </div>
+          </a>
+
+        </div>
+        <div>
+          <h3>I am Blandine BASABOSE</h3>
+          <p>I am a designer and a web developer</p>
+        </div>
+        <div class="cta">
+          <a href="#"><button>My Portfolio</button></a>
+        </div>
+      </div>
+      <div class="content-left">
+        <img src="./Images/profile.png" alt="My image" />
+      </div>
+    </div>
+  </section>
+  <section id="services">
+    <div class="txt">
+      <h2>My Services</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        vel augue erat. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Pellentesque vel augue erat.
+      </p>
+      <img src="./Images/Line 1.png" alt="line" />
+    </div>
+
+    <div class="cards">
+      <div class="card1">
+        <img src="./Images/web design.png" alt="My image" />
+        <h5>Web Design</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card2">
+        <img src="./Images/web development.png" alt="My image" />
+        <h5>Web Development</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card3">
+        <img src="./Images/photography.png" alt="My image" />
+        <h5>Photography</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card1">
+        <img src="./Images/web design.png" alt="My image" />
+        <h5>Web Design</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card2">
+        <img src="./Images/web development.png" alt="My image" />
+        <h5>Web Development</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card3">
+        <img src="./Images/photography.png" alt="My image" />
+        <h5>Photography</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="about-txt">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        vel augue erat. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Pellentesque vel augue erat.
+      </p>
+      <img src="./Images/Line 1.png" alt="line" />
+    </div>
+    <div class="main-about">
+      <div class="about-left">
+        <img src="./Images/profile.png" alt="my image" />
+      </div>
+      <div class="about-right">
+        <div class="about-top">
+          <h4>Hi There.</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-            consequatur et inventore quas similique
+            Facilisi. Nunc leo tellus, pellentesque id elit nec, cursus rutrum
+            ex. Nullam ac orci at quam pharetra consequat vitae id tortor.
+            Etiam dapibus 5libero ut luctus commodo. Cras malesuada quis odio
+            et suscipit. Donec ligula sem, congue id ullamcorper a, auctor et
+            erat.
           </p>
         </div>
-        <div class="icons">
-          <!-- <div>
-            <a href="https://web.facebook.com/"
-              ><i class="fab fa-facebook-f"></i
-            > facebook</a>
-          </div> -->
-          <div>
-            <a href="https://twitter.com/home"><i class="fa fa-twitter"></i></a>
+        <div class="about-bottom">
+          <div class="about-bottom-left">
+            <h4>Name:</h4>
+            <p>Blandine BASABOSE</p>
+            <h4>Email:</h4>
+            <p>example@gmai.com</p>
           </div>
-          <div>
-            <a href="https://www.instagram.com/"
-              ><i class="fa fa-instagram"></i
-            ></a>
+          <div class="about-bottom-right">
+            <h4>Phone:</h4>
+            <p>+250788000000</p>
+            <h4>LinkedIn:</h4>
+            <p>Blandine Basabose Usanase</p>
           </div>
         </div>
       </div>
-      <div class="contact-right">
-        <form  name="myform" method="post" >
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact-content">
+      <h2>Contact Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+        consequatur et inventore quas similique
+      </p>
+      <img src="./Images/Line 1.png" alt="line" />
+    </div>
+    <div class="icons">
+      <a href="https://twitter.com/home">
+        <div>
+          <img src="Images/gmail-new.png"></img>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/">
+        <div>
+          <img src="Images/web development.png"></img>
+        </div>
+      </a>
+
+
+      <a href="https://www.instagram.com/">
+        <div>
+          <img src="Images/apple-phone.png"></img>
+        </div>
+      </a>
+
+
+      <a href="https://www.instagram.com/">
+        <div>
+          <img src="Images/sms.png"></img>
+        </div>
+      </a>
+
+    
+</div>
+      
+      <div class="contact-form">
         <h2>Send Me a message</h2>
-        <div>
-          <input type="text" id="name" name= "name" placeholder="Name" /><span>Please provide your name.</span>
-        </div>
-          <div><input type="text" id="email" name="email" placeholder="Email" /><span>Please use a valid email.</span>
-        </div>
-        <div>
-          <textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="Message"
-        ></textarea>
-        </div>
-        <div class="contact-button">
-          <button>Send</button>
-        </div>
-      </form>   
+        <input type="text" id="name" name="name" placeholder="Name" />
+        <!-- <span>Please provide your name.</span> -->
+
+        <input type="text" id="email" name="email" placeholder="Email" />
+        <!-- <span>Please use a valid email.</span> -->
+        <textarea name="message" id="message" cols="50" rows="5" placeholder="Message"></textarea>
+       
+          <!-- <button onclick="sendMessage()" id="send">Send</button> -->
+          <div><button id="send">Send</button></div>
+
     
       </div>
-    </section>
-    <script
-      src="https://kit.fontawesome.com/0bc2a4a873.js"
-      crossorigin="anonymous"
-    ></script>
-    
-    <script src="brand.js"></script>
-  </body>
+</div>
+   
+  </section>
+  <script src="https://kit.fontawesome.com/0bc2a4a873.js" crossorigin="anonymous"></script>
+
+  <script src="./scripts/firebase.js"></script>
+  <script src="/scripts/capstone.js"></script>
+  <!-- <script>
+  function recordHistory(){//function to validate input text fields on client side, via record button
+ 
+    var name = document.querySelector("#name").value;
+    var email = document.querySelector("#email").value;
+    var message = document.querySelector("#message").value;
+  
+    if( name ==='' || email ==='' || message==='' ){
+      
+    alert("Please fill all text fields...!!!!!!");
+     
+  return
+    }
+  
+    }
+    recordHistory()
+    function sendMessage(){
+      recordHistory();
+      db.ref('messages/'+ name).set({
+        Name:name,
+        Email:email,
+        Message: message
+      })
+      alert('Success');
+    }</script> -->
+  <script>
+    //----------------------Reading data----------------
+    var nameV, emailV, messageV
+    function Ready() {
+      nameV = document.getElementById('name')
+      emailV = document.getElementById('email')
+      messageV = document.getElementById('message')
+    }
+    //---------------------send--------------
+    document.getElementById('send').onclick = function () {
+      Ready();
+      firebase.firestore().ref('Message/' + nameV).set({
+        userName: nameV,
+        userEmail: emailV,
+        userMessage: messageV
+      });
+    }
+  </script>
+
+</body>
+
 </html>
